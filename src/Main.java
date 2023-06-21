@@ -11,12 +11,12 @@ public class Main {
             sc.nextLine();
             switch (esc){
                 case 1:
-
+                    presentation();
                     break;
                 case 2:
-                    StringOrdemNatural();
-                    ComandosPQ();
-                    StringOrdemReversa();
+                    stringOrdemNatural();
+                    comandosPQ();
+                    stringOrdemReversa();
                     break;
                 case 3:
                     henriquepresentation(sc);
@@ -39,7 +39,7 @@ public class Main {
         System.out.println(carro2.compareTo(carro1));
         System.out.println(carro3.compareTo(carro1));
     }
-    private static void ComandosPQ() {
+    private static void comandosPQ() {
         Queue<String> testePQ = new PriorityQueue<>();
         testePQ.add("abcd");
         testePQ.add("1234");
@@ -83,7 +83,7 @@ public class Main {
         testePQ.clear();
         System.out.println("Priority Queue: " + testePQ);
     }
-    private static void StringOrdemNatural() {
+    private static void stringOrdemNatural() {
         Queue<String> stringsON = new PriorityQueue<>();
         stringsON.offer("abcd");
         stringsON.offer("1234");
@@ -99,7 +99,7 @@ public class Main {
         System.out.println("Priority Queue: " + stringsON);
     }
 
-    private static void StringOrdemReversa() {
+    private static void stringOrdemReversa() {
         Queue<String> stringsReverse = new PriorityQueue<>(Collections.reverseOrder());
         stringsReverse.offer("abcd");
         stringsReverse.offer("1234");
@@ -113,5 +113,15 @@ public class Main {
             System.out.println(stringsReverse.poll());
         }
         System.out.println("Priority Queue: " + stringsReverse);
+    }
+
+    public  static void presentation(){
+        Queue<String> listas = new LinkedList<>();
+
+        listas.add("Primeiro elemento elemento");
+        listas.add("Segundo elemento");
+        listas.add("Terceiro elemento");
+
+        System.out.println(listas);
     }
 }
